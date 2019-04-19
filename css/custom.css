@@ -1,0 +1,40 @@
+.inativo {
+    opacity: 0.5;
+}
+
+.breathe-div {
+    color: black;
+    line-height: 60px;
+    width: 295px;
+    height: 65px;
+    border: 1px solid #2b92d4;
+    border-radius: 25%;
+    text-align: center;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    -webkit-animation-timing-function: linear;
+    /*緩動 分為 "linear" "ease-in" "ease-out" "ease-in-out" */
+    -webkit-animation-name: breathe;
+    -webkit-animation-duration: 1500ms;
+    /* time animation*/
+    -webkit-animation-iteration-count: infinite;
+    /*loop animation*/
+    -webkit-animation-direction: alternate;
+    /*呼吸 animation*/
+}
+
+.breathe-div .breathe-div2 {
+    width: 625px;
+}
+
+@-webkit-keyframes breathe {
+    0% {
+        opacity: .4;
+        box-shadow: 0 1px 2px rgba(0, 147, 223, 0.4), 0 1px 1px rgba(0, 147, 223, 0.1) inset;
+    }
+    100% {
+        opacity: 1;
+        border: 1px solid rgba(59, 235, 235, 0.7);
+        box-shadow: 0 1px 30px #0093df, 0 1px 20px #0093df inset;
+    }
+}
